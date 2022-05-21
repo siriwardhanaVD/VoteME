@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">VoteME</string>
+    <string name="mainNameAct1">Election Commission of Sri Lanka</string>
+    <string name="mainNameAct2">ශ්‍රී ලංකා මැතිවරණ කොමිසම් සභාව </string>
+    <string name="mainNameAct3">இலங்கை தேர்தல் ஆணையம்</string>
+
+    <string name="lan1">English</string>
+    <string name="lan2">සිංහල</string>
+    <string name="lan3">தமிழ்</string>
+</resources>

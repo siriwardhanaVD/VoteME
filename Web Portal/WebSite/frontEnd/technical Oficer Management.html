@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Sidebar 02</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+		
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar" class="bg-dark">
+				<div id="btnSideBar" class="custom-menu hideOrShow">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+						<i class="fa fa-bars"></i>
+						<span class="sr-only">Toggle Menu</span>
+					</button>
+				</div>
+				<div class="p-3 pt-5">
+		  		<!--img -->
+	        <ul class="list-unstyled components mb-5" style="min-height : 75vh;">
+			  <li class="">
+                <a href="./dashboard.html" >Dashboard</a>
+	          </li>
+			  <li>
+			   <li class="">
+	              <a href="./voters Managment.html" >Voters</a>
+	          </li>
+			   <li>
+	              <a href="./candidates Management.html" >Candidates</a>
+	          </li>
+			  <li>
+	              <a href="./VotingCenter.html">Voting Center</a>
+	          </li>
+	          <li>
+				   <a href="./technical Oficer Management.html" class="text-danger">Technical Officers</a>
+	          </li>
+			  
+	        </ul>
+			<div>
+                <button class="btn btn-info w-100" onclick="logout()">Log Out</button>
+	        </div>
+
+	      </div>
+    	</nav>
+
+		  <!-- Page Content  -->
+		  <div id="content" class="">
+			<div  class="" style="width : 96%; margin-left : 2%;">
+				<div class="row my-4">
+					<div class="col">
+						<h6 style="margin-top : 1%;">Presidential Election / Technical Officers</h6>
+					</div>
+					<div class="col text-right">
+						<button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#technicalOfficerCreate">+ New</button>
+					</div>
+				</div>
+				<table class="table table-bordered" >
+				  <thead>
+					<tr>
+					  <th scope="col">Employee ID</th>
+					  <th scope="col">Full Name</th>
+					  <th scope="col">Personal Address</th>
+					  <th scope="col">Age</th>
+					  <th scope="col">Mobile Number</th>
+					  <th scope="col">NIC</th>
+					</tr>
+				  </thead>
+				  <tbody id="tblBodyTechnician">
+				
+				  </tbody>
+				</table>
+			</div>
+		  </div>
+		</div>
+		
+		
+		<!-- Modal -->
+		<div class="modal fade" id="technicalOfficerCreate" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-lg">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="staticBackdropLabel">Create New Technical Officer</h5>				
+			  </div>
+			  <div class="modal-body">
+					<div class="row">
+						<div class="col">
+							  <div class="mb-3">
+								<label for="exampleInputEmail1" class="form-label">Full Name</label><br>
+								<input type="email" class="w-100" id="nameT" aria-describedby="emailHelp" required>
+								<small id="nameTW" class="form-label text-danger"></small>
+							  </div>
+						</div>
+						<div class="col">
+							  <div class="mb-3">
+								<label for="exampleInputEmail1" class="form-label">Age</label><br>
+								<input type="text" class="w-100" id="ageT" style="border" required>
+								<small id="ageTW" class="form-label text-danger"></small>
+							  </div>
+						</div>					
+					</div>
+				
+				  <div class="mb-3">
+					<label for="exampleInputPassword1" class="form-label">Personal Address</label><br>
+					<input type="text" class="w-100" id="personalAddressT" aria-describedby="emailHelp" required>
+					<small id="personalAddressTW" class="form-label text-danger"></small>
+				  </div>
+				  
+					<div class="row">
+						<div class="col">
+							  <div class="mb-3">
+								<label for="exampleInputEmail1" class="form-label">NIC</label><br>
+								<input type="text" class="w-100" id="nicT" aria-describedby="emailHelp" required>
+								<small id="nicTW" class="form-label text-danger"></small>
+							  </div>
+						</div>
+						<div class="col">
+							  <div class="mb-3">
+								<label for="exampleInputEmail1" class="form-label">Mobile Number</label><br>
+								<input type="text" class="w-100" id="mobileT" aria-describedby="emailHelp" required>
+								<small id="mobileTW" class="form-label text-danger"></small>
+							  </div>
+						</div>					
+					</div>
+					
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="clearAllWarinigsTO()">Close</button>
+				<button type="button" class="btn btn-success" onclick="createTechnicalOfficer()">Create Technical Officer</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		
+		
+		<!-- Modal -->
+<div class="modal fade" id="deleteModelT" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteeModelLable" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteTopLableT"></h5>
+      </div>
+      <div class="modal-body">
+        Are you sure want to delete this Technical Officer...?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <button type="button" class="btn btn-danger" onclick="deleteTOCofirmed()">Yes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+		<!-- Modal -->
+<div class="modal fade" id="updateModelT" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteeModelLable" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title"> Update Technical Officer Details</h5>
+      </div>
+      <div class="modal-body ">
+		<div class="row">
+						<div class="col">
+							  <div class="mb-3">
+								<label for="exampleInputEmail1" class="form-label">Full Name</label><br>
+								<input type="email" class="w-100" id="nameTU" aria-describedby="emailHelp" required>
+								<small id="nameTUW" class="form-label text-danger"></small>
+							  </div>
+						</div>
+						<div class="col">
+							  <div class="mb-3">
+								<label for="exampleInputEmail1" class="form-label">Age</label><br>
+								<input type="text" class="w-100" id="ageTU" style="border" required>
+								<small id="ageTUW" class="form-label text-danger"></small>
+							  </div>
+						</div>					
+					</div>
+				
+				  <div class="mb-3">
+					<label for="exampleInputPassword1" class="form-label">Personal Address</label><br>
+					<input type="text" class="w-100" id="personalAddressTU" aria-describedby="emailHelp" required>
+					<small id="personalAddressTUW" class="form-label text-danger"></small>
+				  </div>
+				  
+					<div class="row">
+						<div class="col">
+							  <div class="mb-3">
+								<label for="exampleInputEmail1" class="form-label">NIC</label><br>
+								<input type="text" class="w-100" id="nicTU" aria-describedby="emailHelp" disabled>
+								<small id="nicTUW" class="form-label text-danger"></small>
+							  </div>
+						</div>
+						<div class="col">
+							  <div class="mb-3">
+								<label for="exampleInputEmail1" class="form-label">Mobile Number</label><br>
+								<input type="text" class="w-100" id="mobileTU" aria-describedby="emailHelp" required>
+									<small id="mobileTUW" class="form-label text-danger"></small>
+								<input type="text" class="w-100" id="cIDU" aria-describedby="emailHelp" style="display : none;">
+							  </div>
+						</div>				
+					</div>
+		
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="clearAllWarinigsTO()">Cancel</button>
+        <button type="button" class="btn btn-success" onclick="updateTechnicalOfficer()">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="cantDeleteWarning" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="deleteeModelLable" aria-hidden="true">
+	  <div class="modal-dialog">
+		<div class="modal-content">
+		  <div class="modal-header">
+			<h5 class="modal-title text-danger" id="deleteTopLableT">Error</h5>
+		  </div>
+		  <div class="modal-body">
+			You can't delete this Technical Officer. This Technical Officer is assigned to a Constituency. Realse and try again!
+		  </div>
+		  <div class="modal-footer">
+			<button type="button" class="btn btn-success" data-bs-dismiss="modal">Ok</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+		
+		
+	
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+	
+  </body>
+</html>

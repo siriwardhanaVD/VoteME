@@ -1,0 +1,98 @@
+{
+  "project_info": {
+    "project_number": "24893477661",
+    "firebase_url": "https://election-41364-default-rtdb.firebaseio.com",
+    "project_id": "election-41364",
+    "storage_bucket": "election-41364.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24893477661:android:d5640235f8b14d4e7c07f4",
+        "android_client_info": {
+          "package_name": "com.example.election"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24893477661-3tu4n6qf7p4dqhvt7gnh497l15jkp9fa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCi8tibc0NsTL-l4-L_4l7A8JeUznl4mk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24893477661-3tu4n6qf7p4dqhvt7gnh497l15jkp9fa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24893477661:android:4ac534b9c43950627c07f4",
+        "android_client_info": {
+          "package_name": "com.example.electionapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24893477661-3tu4n6qf7p4dqhvt7gnh497l15jkp9fa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCi8tibc0NsTL-l4-L_4l7A8JeUznl4mk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24893477661-3tu4n6qf7p4dqhvt7gnh497l15jkp9fa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24893477661:android:d823c553d6a88bbf7c07f4",
+        "android_client_info": {
+          "package_name": "com.example.voteme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "24893477661-3tu4n6qf7p4dqhvt7gnh497l15jkp9fa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCi8tibc0NsTL-l4-L_4l7A8JeUznl4mk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "24893477661-3tu4n6qf7p4dqhvt7gnh497l15jkp9fa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
